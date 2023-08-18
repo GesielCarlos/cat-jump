@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-screen{
+    width: 100%;
+    height: 90vh;
+    margin: 0 auto;
+    position: absolute;
+    overflow: hidden;
+    background: linear-gradient(rgb(121, 121, 255), rgb(178, 178, 250));
+    filter: none;
+}
+
+.clouds{
+    width: 600px;
+    position: absolute;
+    animation: clouds-animation 15s infinite linear;
+}
+
+.cat{
+    width: 120px;
+    position: absolute;
+    bottom: 0px;
+    left: 50px;
+    z-index: 1;
+}
+
+.jump{
+    animation: cat-jump 700ms ease-out;
+}
+
+.hydrant{
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: hydrant-animation 1s infinite linear;
+    z-index: 1;
+}
+
+.buildings{
+    position: absolute;
+    width: 1850px;
+    bottom: 0;
+}
+
+.display-score{
+    position: relative;
+    display: flex;
+    margin: auto;
+    top: 30px;
+    background-color: rgba(0, 0, 0, 0.527);
+    width: 150px;
+    height: 120px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.score{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.8rem;
+    color: white;
+}
+
+.score-value{
+    position: relative;
+    font-weight: 700;
+    font-size: 4.5rem;
+    display: block;
+    margin-top: -10px;
+}
+
+.menu-screen{
+    position: relative;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 15vh;
+    background-color: rgba(0, 0, 0, 0.527);
+    color: white;
+    height: 220px;
+}
+
+.game-over{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.final-score{
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.btn-play{
+    border: none;
+    border-radius: 100px;
+    padding: 10px 15px 10px 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: black;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.ground{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+}
+
+@keyframes hydrant-animation{
+    from{
+        right: -80px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes cat-jump{
+    0%{
+        bottom: 0;
+    }
+
+    40%{
+        bottom: 200px;
+    }
+
+    50%{
+        bottom: 200px;
+    }
+
+    60%{
+        bottom: 200px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+}
+
+@keyframes clouds-animation{
+    from{
+        right: -600px;
+    }
+
+    to{
+        right: 100%;
+    }
+}

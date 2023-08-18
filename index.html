@@ -3,19 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo de Pular</title>
+    <title>Cat Jump</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body>    
+    <div class="game-screen">
+        <img src="./images/clouds.png" class="clouds">
+        <img src="./images/cat.gif" class="cat">
+        <img src="./images/hydrant.png" class="hydrant">
+        <img src="images/buildings.png" class="buildings">
+        
+    </div>
     
-    <div class="tela-jogo">
-        <img src="./imagens/nuvens.png" class="nuvens">
-        <img src="./imagens/mario.gif" class="mario">
-        <img src="./imagens/cacto.png" class="cacto">
+    <section class="display-score">
+        <div class="score">score:
+            <span class="score-value">00</span>
+        </div>
+    </section>
+
+    <div class="menu-screen">
+        <span class="game-over">game over</span>
+        <span class="final-score">score <span>00</span></span>
+
+        <button class="btn-play">
+            <span><img src="images/play-again-icon.png"></span>
+            Jogar novamente
+        </button>
     </div>
 
-    
+    <div class="bottom-screen">
+        <img src="./images/ground.jpg" class="ground">
+    </div>
+
 </body>
-<script src="script.js"></script>
+<script src="js/script.js"></script>
 </html>
